@@ -24,10 +24,4 @@ public class MainWebPage extends BasePage{
         click(shopDemoBtn);
     }
 
-//    public String getAdminName(){
-//        String user = getText(adminUserName);
-//        System.out.println("user: " + user);
-//        return user;
-//    }
-
 }

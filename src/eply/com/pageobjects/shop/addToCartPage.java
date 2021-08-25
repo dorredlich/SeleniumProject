@@ -7,7 +7,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class addToCartPage extends BasePage {
 
-
     @FindBy(css = "#product-price")
     private WebElement price;
 

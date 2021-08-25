@@ -10,12 +10,10 @@ import java.util.List;
 
 public class SelectProduct extends BasePage {
 
-
     @FindBy(css = ".ui.negative.icon.labeled.button")
     private WebElement clearBtn;
     @FindBy(css = "a.header.sylius-product-name")
     private List<WebElement> productList;
-
 
     public SelectProduct(WebDriver driver) {
         super(driver);
@@ -24,7 +22,6 @@ public class SelectProduct extends BasePage {
     public String getTextClear(){
        return getText(clearBtn);
     }
-
 
     public void selectProductToBuy(String productName){
         for (WebElement el: productList) {
@@ -40,5 +37,4 @@ public class SelectProduct extends BasePage {
             }
         }
     }
-
 }
