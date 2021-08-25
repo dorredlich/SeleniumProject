@@ -10,6 +10,7 @@ import java.util.List;
 
 public class SelectProduct extends BasePage {
 
+
     @FindBy(css = ".ui.negative.icon.labeled.button")
     private WebElement clearBtn;
     @FindBy(css = "a.header.sylius-product-name")
