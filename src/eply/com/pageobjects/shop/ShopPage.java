@@ -24,26 +24,16 @@ public class ShopPage extends BasePage {
     }
 
     public void chooseCategory(String clothesName, String list) {
-        System.out.println("size: " + barList.size());
-        for (int i = 0; i < barList.size(); i++) {
-            System.out.println("test: " + getText(barList.get(i)));
-            if (getText(barList.get(i)).equals(clothesName)) {
-                System.out.println("Text2: " + barList.get(i));
-                sleep(2000);
-                moveTo(barList.get(i));
-                sleep(1000);
-                click(barList.get(i));
+        for (WebElement el: barList) {
+            if (getText(el).equals(clothesName)) {
+                moveTo(el);
+                click(el);
                 if (!clothesName.equals("Dresses")){
                     sleep(2000);
-                    for (int j = 0; j < dropDownBtn.size(); i++){
-                        System.out.println("size: " + dropDownBtn.size());
-                        System.out.println("Text: " + dropDownBtn.get(i).getText());
-                        if (getText(dropDownBtn.get(i)).equals(list)) {
-                            System.out.println("size2: " + dropDownBtn.size());
-                            sleep(2000);
-                            moveTo(dropDownBtn.get(i));
-                            sleep(1000);
-                            click(dropDownBtn.get(i));
+                    for (WebElement el2: dropDownBtn){
+                        if (getText(el2).equals(list)) {
+                            moveTo(el2);
+                            click(el2);
                             break;
                         }
                     }

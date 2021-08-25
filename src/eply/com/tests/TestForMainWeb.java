@@ -3,6 +3,7 @@ package eply.com.tests;
 import eply.com.pageobjects.MainWebPage;
 import eply.com.pageobjects.shop.SelectProduct;
 import eply.com.pageobjects.shop.ShopPage;
+import eply.com.pageobjects.shop.addToCartPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -30,6 +31,12 @@ public class TestForMainWeb extends BaseTest{
         SelectProduct selectProduct = new SelectProduct(driver);
         String text = selectProduct.getTextClear();
         Assert.assertEquals(text, "Clear");
+
+        selectProduct.selectProductToBuy("Ribbed copper slim fit Tee");
+
+        addToCartPage cart = new addToCartPage(driver);
+
+        System.out.println("The Price is: " + cart.getPrice());
 //        LoginAdminPage ap = new LoginAdminPage(driver);
 //        ap.printText();
     }
