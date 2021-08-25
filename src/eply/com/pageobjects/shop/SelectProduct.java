@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
+
 public class SelectProduct extends BasePage {
 
     @FindBy(css = ".ui.negative.icon.labeled.button")
