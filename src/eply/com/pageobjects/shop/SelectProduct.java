@@ -7,12 +7,14 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
+
 public class SelectProduct extends BasePage {
 
     @FindBy(css = ".ui.negative.icon.labeled.button")
     private WebElement clearBtn;
     @FindBy(css = "a.header.sylius-product-name")
     private List<WebElement> productList;
+
 
     public SelectProduct(WebDriver driver) {
         super(driver);
