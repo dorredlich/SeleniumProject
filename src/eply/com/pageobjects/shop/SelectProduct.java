@@ -26,8 +26,6 @@ public class SelectProduct extends BasePage {
     public void selectProductToBuy(String productName){
         for (WebElement el: productList) {
             if (getText(el).equals(productName)){
-                System.out.println("text: " + getText(el));
-                System.out.println("text2: " + productName);
                 sleep(1000);
                 moveTo(el);
                 sleep(2000);
