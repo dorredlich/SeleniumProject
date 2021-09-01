@@ -3,7 +3,7 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/redli/FinalProjectSelenium">
         <classes>
-            <class name="eply.com.tests.TestForMainWeb">
+            <class name="eply.com.TestForMainWeb">
                 <methods>
                     <include name="test_shopPage"/>
                     <include name="test_adminPage"/>
